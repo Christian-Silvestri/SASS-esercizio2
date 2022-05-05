@@ -1,0 +1,46 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 10px;
+}
+
+div {
+  border: solid 1px red;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 10px;
+  gap: 10px;
+}
+div h1 {
+  color: green;
+  border-bottom: solid 1px blue;
+}
+div section.main {
+  display: flex;
+}
+div section.main article {
+  padding: 20px 10px;
+}
+div section.main article:nth-child(odd) {
+  color: blue;
+  border: solid 1px green;
+  font-size: 1rem;
+}
+div section.main article:nth-child(even) {
+  color: red;
+  border: solid 1px green;
+  font-size: 1rem;
+}
+div section.footer {
+  color: green;
+  border: solid 1px blue;
+  font-size: 1.5rem;
+  padding: 20px 10px;
+}
+
+/*# sourceMappingURL=style.css.map */

@@ -1,0 +1,50 @@
+@import 'scss/color-font';
+@import 'scss/mixin-article';
+
+* {
+    box-sizing: border-box;
+
+}
+
+body {
+    margin: 10px;
+}
+
+div {
+    border: solid 1px $color-primary;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 10px;
+    gap: 10px;
+
+    h1 {
+        color: $color-tertiary;
+        border-bottom: solid 1px $color-secondary;
+    }
+
+    section.main {
+        display: flex;
+        
+
+        article {
+            padding: 20px 10px;
+
+            &:nth-child(odd) {
+                @include article-card($color-secondary, $color-tertiary, $default-size);
+            }
+
+            &:nth-child(even) {
+                @include article-card($color-primary, $color-tertiary, $default-size);
+            }
+        }
+    }
+
+
+    section.footer {
+        @include article-card($color-tertiary, $color-secondary, $default-size * 1.5);
+        padding: 20px 10px;
+    }
+}
